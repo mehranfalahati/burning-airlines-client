@@ -1,3 +1,5 @@
+import ReservationSearch from "./ReservationSearch";
+
 function App() {
   return (
     <div className="App">
@@ -6,6 +8,7 @@ function App() {
       Reservation coming soon.
 
       
+      <ReservationSearch />
     </div>
   );
 }
