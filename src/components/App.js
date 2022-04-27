@@ -1,7 +1,9 @@
+import ReservationSearch from "./ReservationSearch";
+
 function App() {
   return (
     <div className="App">
-      hello
+      <ReservationSearch />
     </div>
   );
 }
