@@ -1,7 +1,11 @@
 function App() {
   return (
     <div className="App">
-      hello
+      search coming soon
+      flights coming soon
+      Reservation coming soon.
+
+      
     </div>
   );
 }
