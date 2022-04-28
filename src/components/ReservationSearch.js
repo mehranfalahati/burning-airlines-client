@@ -18,7 +18,7 @@ class ReservationSearch extends Component {
 
     
     componentDidMount() {
-        const fetchFlights = () => {
+        const fetchFlights = (git ) => {
             axios(SERVER_URL).then((response) => {
                 //console.log(response.data)
                 this.setState({flights: response.data});
@@ -28,7 +28,6 @@ class ReservationSearch extends Component {
         fetchFlights();
     }
 
-
     _eventHandle(origin, destination) {
         //console.log({origin: origin, destination: destination})
         let matchFlight = this.state.flights.filter((flight) => {
@@ -36,7 +35,6 @@ class ReservationSearch extends Component {
         })
         //console.log(matchFlight)
         this.setState(matchFlight)
-
     }
 
     render() {
