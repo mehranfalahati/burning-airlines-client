@@ -2,9 +2,10 @@ import React from "react";
 
 const DisplayFlights = (props) => {
     return (
-        <div>
-            <h2>{ props.flights }</h2>
-        </div>
+        console.log(props.result)
+        // <div>
+        //     {props.result}
+        // </div>
     )
 }
 
