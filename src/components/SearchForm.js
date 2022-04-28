@@ -23,6 +23,7 @@ class SearchForm extends Component {
     _handleSubmit(event) {
         event.preventDefault();
         this.props.onSubmit(this.state.origin, this.state.destination);
+        this.setState({origin: '', destination: ''});
     }
 
     render() {
