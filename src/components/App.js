@@ -3,9 +3,7 @@ import ReservationSearch from "./ReservationSearch";
 function App() {
   return (
     <div className="App">
-      search coming soon
-      flights coming soon
-      Reservation coming soon.
+     THE BEST F****KING SITE EVER
 
       
       <ReservationSearch />

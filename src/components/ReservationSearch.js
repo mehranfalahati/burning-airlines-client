@@ -33,8 +33,9 @@ class ReservationSearch extends Component {
         let matchFlight = this.state.flights.filter((flight) => {
             return flight.origin === origin && flight.destination === destination
         })
-        //console.log(matchFlight)
-        this.setState(matchFlight)
+        console.log(matchFlight)
+        this.setState({result: matchFlight})
+        
     }
 
     render() {
@@ -44,8 +45,11 @@ class ReservationSearch extends Component {
                 <SearchForm onSubmit={this._eventHandle} />
                 <DisplayFlights flights={this.state.result} />
             </div>
+          
         );
     }
 }
+
+
 
 export default ReservationSearch;
