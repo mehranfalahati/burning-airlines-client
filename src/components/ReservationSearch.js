@@ -15,7 +15,7 @@ class ReservationSearch extends Component {
     }
 
     componentDidMount() {
-        const fetchFlights = () => {
+        const fetchFlights = (git ) => {
             axios(SERVER_URL).then((response) => {
                 this.setState({flights: response.data});
                 setTimeout(fetchFlights, 5000);
@@ -24,9 +24,9 @@ class ReservationSearch extends Component {
         fetchFlights();
     }
 
-    saveFlights(content) {
-        axios.post(SERVER_URL, {content: content}).then((response) => {
-            console.log(response)
+    saveFlights(origin, destination) {
+        axios.post(SERVER_URL, {origin: origin, destination:destination}).then((response) => {
+            // console.log(origin, destination)
             this.setState({flights: [response.data, ...this.state.flights]});
         });
     }
