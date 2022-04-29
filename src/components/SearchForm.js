@@ -23,22 +23,24 @@ class SearchForm extends Component {
     _handleSubmit(event) {
         event.preventDefault();
         this.props.onSubmit(this.state.origin, this.state.destination);
-        this.setState({origin: '', destination: ''});
+        // console.log(this.state.origin, this.state.destination)
     }
 
     render() {
         return(
             <form onSubmit={this._handleSubmit}>
                 <label>Origin</label>
-                <input type="search" required placeholder="JFK" onChange={this._handleInputOrigin} />
+                <input type="search" required placeholder="JFK" onChange={this._handleInputOrigin} value={this.state.origin} />
 
                 <label>Destination</label>
-                <input type="search" required placeholder="SFO" onChange={this._handleInputDestination} />
+                <input type="search" required placeholder="SFO" onChange={this._handleInputDestination} value={this.state.destination} />
 
                 <button type="submit" >Search</button>
             </form>
         );
     }
 };
+
+
 
 export default SearchForm;
